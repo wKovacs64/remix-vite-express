@@ -15,7 +15,6 @@ import { renderToPipeableStream } from 'react-dom/server'
 import { createExpressApp } from 'remix-create-express-app'
 import http2Express from 'http2-express-bridge';
 import express from 'express';
-// import compression from 'compression';
 import morgan from 'morgan'
 import { sayHello } from '#app/hello.server'
 import { type SessionData, type SessionFlashData } from '#app/session.server'
@@ -170,7 +169,6 @@ export const app = createExpressApp({
   configure: expressApp => {
     console.log('Configuring custom Express app')
     expressApp.disable('x-powered-by')
-    // expressApp.use(compression())
     expressApp.use(
       morgan('tiny', {
         skip: req =>
