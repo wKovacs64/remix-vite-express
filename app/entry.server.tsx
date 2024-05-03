@@ -15,6 +15,7 @@ import { renderToPipeableStream } from 'react-dom/server'
 import { createExpressApp } from 'remix-create-express-app'
 import http2Express from 'http2-express-bridge';
 import express from 'express';
+// import compression from 'compression';
 import morgan from 'morgan'
 import { sayHello } from '#app/hello.server'
 import { type SessionData, type SessionFlashData } from '#app/session.server'
