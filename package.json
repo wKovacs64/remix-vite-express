@@ -23,7 +23,7 @@
     "morgan": "^1.10.0",
     "react": "^19.0.0-beta-94eed63c49-20240425",
     "react-dom": "^19.0.0-beta-94eed63c49-20240425",
-    "remix-create-express-app": "0.3.2"
+    "remix-create-express-app": "^0.3.3"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.9.1",
@@ -39,6 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.5",
     "remix-express-dev-server": "0.2.0",
     "typescript": "^5.1.6",
     "vite": "^5.1.0",
