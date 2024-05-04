@@ -15,9 +15,12 @@ export function session({ isCookieSessionStorage }: SessionMiddlewareArgs) {
     // setup a proxy to track if the session has been modified
     // so we can commit it back to the store
     const proxyHandler = {
-      isDirty: false,
+      _isDirty: false,
+      get isDirty() {
+        return this._isDirty
+      },
       get(target: typeof session, prop: PropType) {
-        this.isDirty ||= ['set', 'unset', 'destroy'].includes(prop)
+        this._isDirty ||= ['set', 'unset', 'destroy'].includes(prop)
         return target[prop]
       },
     }
